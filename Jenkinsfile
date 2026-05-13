@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven'
+        maven 'maven3'
         jdk 'JDK21'
     }
 
@@ -48,7 +48,7 @@ pipeline {
             emailext (
                 subject: "SUCCESS: ${JOB_NAME} #${BUILD_NUMBER}",
                 body: "Build succeeded!\nCheck: ${BUILD_URL}",
-                to: "sattiarati@gmail.com"
+                to: "ashwiniitti28@gmail.com"
             )
         }
 
@@ -56,7 +56,7 @@ pipeline {
             emailext (
                 subject: "FAILED: ${JOB_NAME} #${BUILD_NUMBER}",
                 body: "Build failed!\nCheck: ${BUILD_URL}",
-                to: "sattiarati@gmail.com"
+                to: "ashwiniitti28@gmail.com"
             )
         }
     }
