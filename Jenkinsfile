@@ -7,12 +7,13 @@ pipeline {
     }
 
     stages {
-      stage('checkout'){
-        steps{
-          git "https://github.com/ashwiniitti2005/maven.git"
+
+        stage('checkout') {
+            steps {
+                git branch: 'main',
+                    url: 'https://github.com/ashwiniitti2005/maven.git'
+            }
         }
-      }
-    
 
         stage('Build') {
             steps {
