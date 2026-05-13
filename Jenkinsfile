@@ -9,7 +9,10 @@ pipeline {
     stages {
       stage('checkout'){
         steps{
-          git "
+          git "https://github.com/ashwiniitti2005/maven.git"
+        }
+      }
+    
 
         stage('Build') {
             steps {
