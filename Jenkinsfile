@@ -11,7 +11,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: '',
+                    url: 'https://github.com/ashwiniitti2005/maven.git',
                     credentialsId: 'github-token'
             }
         }
